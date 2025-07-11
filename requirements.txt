@@ -13,4 +13,6 @@ PyPDF2
 pypdf
 sentence-transformers
 langchain-openai
+chromadb[duckdb]
+
 

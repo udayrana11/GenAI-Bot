@@ -13,12 +13,20 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
 import os
 
-from dotenv import load_dotenv
-load_dotenv()
+# from dotenv import load_dotenv
+# load_dotenv()
 
-os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
-embeddings=HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+# os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
+# embeddings=HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
+# pull your HF token from Streamlit secrets
+
+hf_token = st.secrets["huggingface"]["token"]
+
+embeddings = HuggingFaceEmbeddings(
+    model_name="all-MiniLM-L6-v2",
+    huggingfacehub_api_token=hf_token
+)
 
 ## set up Streamlit 
 st.title("Conversational RAG With PDF uplaods and chat history")

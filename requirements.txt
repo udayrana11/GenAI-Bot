@@ -3,9 +3,6 @@ python-dotenv
 langchain
 langchain-core
 langchain-community
-langchain-chroma
-chromadb[duckdb]
-duckdb
 faiss-cpu
 langchain-groq
 langchain-huggingface

@@ -11,6 +11,7 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
+import streamlit as st
 import os
 
 # from dotenv import load_dotenv
@@ -22,6 +23,12 @@ import os
 # pull your HF token from Streamlit secrets
 
 hf_token = st.secrets["huggingface"]["token"]
+
+Export it so sentence-transformers can pick it up
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = hf_token
+
+# Now the HuggingFaceEmbeddings client will work
+from langchain_huggingface import HuggingFaceEmbeddings
 
 embeddings = HuggingFaceEmbeddings(
     model_name="all-MiniLM-L6-v2",

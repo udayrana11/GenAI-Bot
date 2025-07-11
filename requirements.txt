@@ -4,7 +4,7 @@ langchain
 langchain-core
 langchain-community
 langchain-chroma
-chromadb
+chromadb[duckdb]
 faiss-cpu
 langchain-groq
 langchain-huggingface
@@ -13,6 +13,6 @@ PyPDF2
 pypdf
 sentence-transformers
 langchain-openai
-chromadb[duckdb]
+
 
 

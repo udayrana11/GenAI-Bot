@@ -8,9 +8,7 @@ langchain-groq
 langchain-huggingface
 langchain-text-splitters
 PyPDF2
-pypdf
+pypdf             # optional duplicate, same codebase
 sentence-transformers
 langchain-openai
-
-
-
+numpy

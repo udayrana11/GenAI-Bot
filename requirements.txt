@@ -14,11 +14,4 @@ langchain-openai
 langchain-embeddings    
 pypdf
 sentence-transformers
-# If using Inference API embeddings
-langchain-huggingface>=0.0.##   # your installed version
-huggingface-hub>=0.15
-
-# If using HuggingFaceHubEmbeddings
-langchain>=0.0.##              
-huggingface_hub>=0.15
 

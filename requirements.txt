@@ -5,11 +5,10 @@ chromadb
 tiktoken
 langchain-community
 langchain-core
-langchain-text-splitters
 langchain-huggingface
 langchain-chroma
-pypdf
-dotenv
-sentence-transformers
 langchain-groq
-faiss-cpu
+langchain-text-splitters
+pypdf
+sentence-transformers
+python-dotenv

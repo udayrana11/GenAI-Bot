@@ -14,16 +14,15 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
 
-# ✅ Load environment variables
-load_dotenv()
-hf_token = os.getenv("HF_TOKEN")
-os.environ["HF_TOKEN"] = hf_token
+
+# ✅ Streamlit secrets-based token loading
+os.environ["HF_TOKEN"] = st.secrets["HF_TOKEN"]
+
 
 # ✅ Page Setup
 st.set_page_config(page_title="RAG Chatbot", layout="centered")
 st.title("🧠 Conversational RAG with PDF + Chat History")
 st.info("🔑 Enter your Groq API key and upload PDFs to begin.")
-st.secrets["HF_TOKEN"]
 
 # ✅ API key input
 api_key = st.text_input("Enter your Groq API Key:", type="password")

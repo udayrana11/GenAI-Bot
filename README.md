@@ -1,4 +1,5 @@
-# GenAI-Bot: https://genai-bot-axhicp8o8qk7ghs5wtd5nl.streamlit.app/
+# GenAI-Bot
+## --> https://genai-bot-axhicp8o8qk7ghs5wtd5nl.streamlit.app/
 
 Conversational PDF assistant using RAG, Chroma &amp; Groq LLM
 
